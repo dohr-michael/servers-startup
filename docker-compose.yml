@@ -33,13 +33,13 @@ rancher:
   container_name: rancher
   restart: always
   links:
-    - db:db
+    - mysql:mysql
   environment:
     VIRTUAL_HOST: rancher.dohrm.fr
     VIRTUAL_PORT: 8080
     LETSENCRYPT_HOST: rancher.dohrm.fr
     LETSENCRYPT_EMAIL: dohr.michael@gmail.com
-    CATTLE_DB_CATTLE_MYSQL_HOST: db
+    CATTLE_DB_CATTLE_MYSQL_HOST: mysql
     CATTLE_DB_CATTLE_MYSQL_PORT: 3306
     CATTLE_DB_CATTLE_MYSQL_NAME: rancher
     CATTLE_DB_CATTLE_USERNAME: rancher
